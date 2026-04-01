@@ -4,8 +4,8 @@ import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { siteConfig } from "@/config/site";
-import { content } from "@/content/pl";
-import { emailHref, phoneHref } from "@/lib/contact";
+import { content } from "@/content/site-content";
+import { emailHref, phoneHref, whatsappHref } from "@/lib/contact";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
@@ -51,6 +51,12 @@ export default function ContactPage() {
                   </Link>
                 </div>
                 <div className="contact-list-item">
+                  <span className="contact-label">{contact.whatsappLabel}</span>
+                  <Link className="contact-value" href={whatsappHref} target="_blank" rel="noreferrer">
+                    {siteConfig.defaultPhone}
+                  </Link>
+                </div>
+                <div className="contact-list-item">
                   <span className="contact-label">{contact.areaLabel}</span>
                   <p className="contact-value">{siteConfig.serviceArea}</p>
                 </div>
@@ -63,7 +69,7 @@ export default function ContactPage() {
                 {content.contactPage.steps.map((item) => (
                   <li key={item}>
                     <span className="panel-bullet" aria-hidden="true">
-                      +
+                      !
                     </span>
                     <span className="contact-copy">{item}</span>
                   </li>

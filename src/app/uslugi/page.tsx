@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 
 import { ContactCta } from "@/components/shared/contact-cta";
 import { PageHero } from "@/components/shared/page-hero";
+import { PricingSection } from "@/components/shared/pricing-section";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { content } from "@/content/pl";
+import { content } from "@/content/site-content";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
@@ -46,6 +47,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <PricingSection compact />
       <ContactCta />
     </>
   );

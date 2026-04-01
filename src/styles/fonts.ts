@@ -1,12 +1,13 @@
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Barlow, Barlow_Condensed } from "next/font/google";
 
-export const bodyFont = Manrope({
+export const bodyFont = Barlow({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-body",
+  weight: ["400", "500", "600", "700"],
 });
 
-export const headingFont = Playfair_Display({
+export const headingFont = Barlow_Condensed({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-heading",

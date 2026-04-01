@@ -1,7 +1,6 @@
-import Link from "next/link";
+import { content } from "@/content/site-content";
 
-import { content } from "@/content/pl";
-import { phoneHref } from "@/lib/contact";
+import { ContactModalTrigger } from "@/components/shared/contact-modal";
 
 export function ContactCta() {
   return (
@@ -15,9 +14,9 @@ export function ContactCta() {
             <p className="section-description">{content.common.contactCtaDescription}</p>
           </div>
 
-          <Link className="button button-primary" href={phoneHref}>
+          <ContactModalTrigger className="button button-primary button-large">
             {content.common.contactCtaButton}
-          </Link>
+          </ContactModalTrigger>
         </div>
       </div>
     </section>

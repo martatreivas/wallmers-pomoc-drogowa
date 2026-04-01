@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ContactCta } from "@/components/shared/contact-cta";
 import { PageHero } from "@/components/shared/page-hero";
 import { createPageMetadata } from "@/lib/metadata";
-import { content } from "@/content/pl";
+import { content } from "@/content/site-content";
 
 export const metadata: Metadata = createPageMetadata({
   title: content.aboutPage.title,

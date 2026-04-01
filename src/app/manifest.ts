@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site";
-import { content } from "@/content/pl";
+import { content } from "@/content/site-content";
 import { themeTokens } from "@/styles/tokens";
 
 export default function manifest(): MetadataRoute.Manifest {

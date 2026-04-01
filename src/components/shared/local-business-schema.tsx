@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/site";
-import { content } from "@/content/pl";
+import { content } from "@/content/site-content";
 
 export function LocalBusinessSchema() {
   const schema = {

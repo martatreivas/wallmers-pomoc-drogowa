@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
-import { content } from "@/content/pl";
-import { phoneHref } from "@/lib/contact";
+import { content } from "@/content/site-content";
+
+import { ContactModalTrigger } from "@/components/shared/contact-modal";
 
 export function SiteHeader() {
   return (
@@ -27,9 +28,9 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Link className="button button-primary" href={phoneHref}>
+          <ContactModalTrigger className="button button-primary">
             {content.header.ctaLabel}
-          </Link>
+          </ContactModalTrigger>
         </nav>
       </div>
     </header>

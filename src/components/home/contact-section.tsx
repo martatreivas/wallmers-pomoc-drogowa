@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
-import { content } from "@/content/pl";
-import { emailHref, phoneHref } from "@/lib/contact";
+import { content } from "@/content/site-content";
+import { emailHref, phoneHref, whatsappHref } from "@/lib/contact";
 
 import { SectionHeading } from "@/components/shared/section-heading";
 
@@ -31,6 +31,12 @@ export function ContactSection() {
               <span className="contact-label">{contact.emailLabel}</span>
               <Link className="contact-value" href={emailHref}>
                 {siteConfig.defaultEmail}
+              </Link>
+            </article>
+            <article className="contact-list-item">
+              <span className="contact-label">{contact.whatsappLabel}</span>
+              <Link className="contact-value" href={whatsappHref} target="_blank" rel="noreferrer">
+                {siteConfig.defaultPhone}
               </Link>
             </article>
             <article className="contact-list-item">

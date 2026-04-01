@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
-import { content } from "@/content/pl";
+import { content } from "@/content/site-content";
 
 export function SiteFooter() {
   return (
@@ -14,6 +14,11 @@ export function SiteFooter() {
 
         <nav className="footer-nav" aria-label="Nawigacja stopki">
           {content.navigation.map((item) => (
+            <Link key={item.href} className="nav-link" href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+          {content.legalNavigation.map((item) => (
             <Link key={item.href} className="nav-link" href={item.href}>
               {item.label}
             </Link>

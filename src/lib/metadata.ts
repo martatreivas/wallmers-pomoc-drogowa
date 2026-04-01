@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { siteConfig } from "@/config/site";
-import { content } from "@/content/pl";
+import { content } from "@/content/site-content";
 
 export const metadataBase = new URL(siteConfig.siteUrl);
 

@@ -1,4 +1,4 @@
-import { content } from "@/content/pl";
+import { content } from "@/content/site-content";
 
 import { SectionHeading } from "@/components/shared/section-heading";
 

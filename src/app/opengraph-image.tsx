@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 import { siteConfig } from "@/config/site";
-import { content } from "@/content/pl";
+import { content } from "@/content/site-content";
 import { themeTokens } from "@/styles/tokens";
 
 export const size = {

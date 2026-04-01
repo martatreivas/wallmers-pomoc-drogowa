@@ -1,6 +1,6 @@
-import Link from "next/link";
+import { content } from "@/content/site-content";
 
-import { content } from "@/content/pl";
+import { ContactModalTrigger } from "@/components/shared/contact-modal";
 
 export function HeroSection() {
   const hero = content.home.hero;
@@ -14,12 +14,9 @@ export function HeroSection() {
           <p className="hero-description">{hero.description}</p>
 
           <div className="hero-actions">
-            <Link className="button button-primary" href={hero.primaryCta.href}>
-              {hero.primaryCta.label}
-            </Link>
-            <Link className="button button-secondary" href={hero.secondaryCta.href}>
-              {hero.secondaryCta.label}
-            </Link>
+            <ContactModalTrigger className="button button-primary button-large hero-contact-button">
+              {hero.primaryCtaLabel}
+            </ContactModalTrigger>
           </div>
 
           <div className="stats" aria-label={hero.statsLabel}>
@@ -35,10 +32,10 @@ export function HeroSection() {
         <aside className="hero-panel" aria-label={hero.panelLabel}>
           <h2 className="panel-title">{hero.panelTitle}</h2>
           <ul className="panel-list">
-            {content.common.serviceHighlights.map((item) => (
+            {hero.dispatchItems.map((item) => (
               <li key={item} className="panel-list-item">
                 <span className="panel-bullet" aria-hidden="true">
-                  +
+                  !
                 </span>
                 <span>{item}</span>
               </li>

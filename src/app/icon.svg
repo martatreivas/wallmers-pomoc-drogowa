@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
   <title>WallMers</title>
-  <rect width="128" height="128" rx="28" fill="#fff7eb" />
+  <rect width="128" height="128" rx="18" fill="#f5faf6" />
   <path
     d="M29 39h13l9 30 9-23h9l9 23 9-30h13L89 90H79L64 55 49 90H39L29 39Z"
-    fill="#a95f2f"
+    fill="#2f8f5b"
   />
 </svg>
